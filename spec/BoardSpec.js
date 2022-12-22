@@ -13,6 +13,10 @@ describe('Board', function() {
       expect(board.hasAnyRowConflicts()).to.be.equal(false);
     });
 
+    it('should not find a row conflict', function() {
+      expect(board.hasRowConflictAt(0)).to.be.equal(false);
+    });
+
     it('should not find a col conflict', function() {
       expect(board.hasAnyColConflicts()).to.be.equal(false);
     });
@@ -45,6 +49,10 @@ describe('Board', function() {
 
     it('should find a row conflict', function() {
       expect(board.hasAnyRowConflicts()).to.be.equal(true);
+    });
+
+    it('should find a row conflict for row 1', function() {
+      expect(board.hasRowConflictAt(1)).to.be.equal(true);
     });
 
     it('should not find a col conflict', function() {

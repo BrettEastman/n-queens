@@ -17,7 +17,15 @@
 
 window.findNRooksSolution = function(n) {
   var solution = undefined; //fixme
+  // create nBoard - new Board({n: n})
+  // create currentBoard = nBoard.toggle(i)
+  // for loop over array of arrays
+    // currentArr = array[i]
+    // hasRowConflicts = false
+    // another for loop over that to check if row conflicts
+      // if so, then hasRowConflicts = true
 
+  // valid solution is only when n pieces fit an nxn size board
   console.log('Single solution for ' + n + ' rooks:', JSON.stringify(solution));
   return solution;
 };
