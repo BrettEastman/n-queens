@@ -128,7 +128,6 @@
         if (currentRow[colIndex] === 1) {
           // add to count
           count++;
-          console.log('count', count);
         }
       }
       // if count more than 1
