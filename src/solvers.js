@@ -72,11 +72,13 @@ window.countNRooksSolutions = function(n) {
   for (var i = 0; i < n; i++) {
     //create current row variable (currentArr = array[i])
     var currentRow = newBoard.rows()[i];
+    // create startingPoint var = 0
+    // if sta
     // innerFunc(index, board)
     var innerFunc = function(board, index) {
       index = index || 0;
       for (var j = index; j < currentRow.length; j++) {
-        debugger;
+        // debugger;
         //toggle the piece on
         board.togglePiece(i, j);
         //increment rookCount
@@ -93,11 +95,12 @@ window.countNRooksSolutions = function(n) {
           //increment solution count
           solutionCount++;
           //clear the board
-          //save the position of the first rook in the current position
+          //save the position of the first rook within the current solution
         } else {
           //recursively call(solution) which is the current board with two toggles
           // i.e. innerFunc(k+1, solution)
           innerFunc(board, j + 1);
+          
         }
       }
     };
